@@ -12,8 +12,6 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-nmap ] :action GoToImplementation<CR>
-
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -76,3 +74,8 @@ nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
+
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
+map <leader>gi :action GotoImplementation<CR>
